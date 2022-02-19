@@ -18,6 +18,7 @@ export const Album = ()=>{
 
   useEffect(()=>{
     getAlbum();
+    window.history.replaceState(null, '', `/album/${id}`);
   },[])
 
   function handleOpenPhoto(id:number){
